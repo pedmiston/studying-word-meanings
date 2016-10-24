@@ -3,7 +3,7 @@ title: Studying word meanings through the eyes
 author: Pierce Edmiston
 ---
 
-# How are word meanings represented in the brain? {.center}
+# How are word meanings represented in the brain?
 
 
 
@@ -21,7 +21,7 @@ An example I use a lot is the canonical dog. So you all know what dogs are and w
 But I don’t need to use language, I bet I can get you all to think about dogs by playing you this sound.
 </aside>
 
-# Cues to the same concept {.center}
+# Cues to the same concept
 
 
 |word         |sound             |
@@ -37,11 +37,11 @@ So the first experiment I'm going to tell you about compares these two types of 
 What's important to note is we've got both animal sounds and non-animal sounds, and that these differ in state.
 </aside>
 
-# Sound-picture congruence {.center}
+# Sound-picture congruence
 
 <img src="figs/sound-picture-congruence-1.png" title="plot of chunk sound-picture-congruence" alt="plot of chunk sound-picture-congruence" style="display: block; margin: auto;" />
 
-# Picture verification task {.center}
+# Picture verification task
 
 ##
 
@@ -61,7 +61,7 @@ What's important to note is we've got both animal sounds and non-animal sounds, 
 
 # So... word meanings are symbolic?
 
-# Property verification {.center}
+# Property verification
 
 ##
 
@@ -69,9 +69,9 @@ What's important to note is we've got both animal sounds and non-animal sounds, 
 
 ##
 
-![](img/visual-knowledge/property-verification/results.png)
+<img src="figs/property-verification-results-1.png" title="plot of chunk property-verification-results" alt="plot of chunk property-verification-results" style="display: block; margin: auto;" />
 
-# Orientation discrimination {.center}
+# Orientation discrimination
 
 ##
 

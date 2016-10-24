@@ -3,12 +3,14 @@ title: Studying word meanings through the eyes
 author: Pierce Edmiston
 ---
 
-# How are word meanings represented in the brain? {.center}
+# How are word meanings represented in the brain?
 
 ```{r config, echo = FALSE, message = FALSE, warning = FALSE}
 library(knitr)
 opts_chunk$set(
   echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
   dev = "png",
   fig.align = "center",
   fig.path = "figs/",
@@ -16,9 +18,12 @@ opts_chunk$set(
 )
 
 library(printr)
+library(crotchet)
+read_all_graphviz_chunks("motivatedcues")
 
-read_chunk("src/picture-verification-task.gv",
-           labels = "picture-verification-task")
+# read_chunk("src/motivated-cues.R")
+read_chunk("src/property-verification.R")
+# read_chunk("src/orientation-discrimination.R")
 ```
 
 <aside class="notes">
@@ -43,7 +48,7 @@ An example I use a lot is the canonical dog. So you all know what dogs are and w
 But I don’t need to use language, I bet I can get you all to think about dogs by playing you this sound.
 </aside>
 
-# Cues to the same concept {.center}
+# Cues to the same concept
 
 ```{r example-cues, results = 'asis'}
 data.frame(
@@ -58,7 +63,7 @@ So the first experiment I'm going to tell you about compares these two types of 
 What's important to note is we've got both animal sounds and non-animal sounds, and that these differ in state.
 </aside>
 
-# Sound-picture congruence {.center}
+# Sound-picture congruence
 
 ```{r sound-picture-congruence}
 library(jpeg)
@@ -72,11 +77,11 @@ grid.draw(rasterGrob(pictures[[1]], x = 0.2, width = 0.8))
 grid.draw(rasterGrob(pictures[[2]], x = 0.8, width = 0.8))
 ```
 
-# Picture verification task {.center}
+# Picture verification task
 
 ##
 
-```{r, picture-verification-task, engine = "dot"}
+```{r picture-verification-task, engine = "dot"}
 ```
 
 ##
@@ -93,7 +98,7 @@ grid.draw(rasterGrob(pictures[[2]], x = 0.8, width = 0.8))
 
 # So... word meanings are symbolic?
 
-# Property verification {.center}
+# Property verification
 
 ##
 
@@ -101,9 +106,10 @@ grid.draw(rasterGrob(pictures[[2]], x = 0.8, width = 0.8))
 
 ##
 
-![](img/visual-knowledge/property-verification/results.png)
+```{r property-verification-results}
+```
 
-# Orientation discrimination {.center}
+# Orientation discrimination
 
 ##
 
