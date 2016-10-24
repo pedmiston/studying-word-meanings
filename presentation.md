@@ -49,7 +49,7 @@ What's important to note is we've got both animal sounds and non-animal sounds, 
 
 ##
 
-![](img/motivated-cues/exp1.jpg)
+<img src="figs/motivated-cues-exp1-1.png" title="plot of chunk motivated-cues-exp1" alt="plot of chunk motivated-cues-exp1" style="display: block; margin: auto;" />
 
 ##
 

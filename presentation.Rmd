@@ -21,7 +21,7 @@ library(printr)
 library(crotchet)
 read_all_graphviz_chunks("motivatedcues")
 
-# read_chunk("src/motivated-cues.R")
+read_chunk("src/motivated-cues.R")
 read_chunk("src/property-verification.R")
 # read_chunk("src/orientation-discrimination.R")
 ```
@@ -86,7 +86,8 @@ grid.draw(rasterGrob(pictures[[2]], x = 0.8, width = 0.8))
 
 ##
 
-![](img/motivated-cues/exp1.jpg)
+```{r motivated-cues-exp1}
+```
 
 ##
 
