@@ -1,5 +1,4 @@
 *.html
-figs/
 cache/
 output/
 .DS_Store
