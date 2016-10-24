@@ -1,0 +1,48 @@
+body {
+  height: 80%;
+}
+.reveal .slides {
+  text-align: left;
+}
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: 'Lato', sans-serif;
+  text-transform: none;
+  text-shadow: none;
+}
+.reveal h1 {
+  font-size: 2em;
+}
+.reveal h2 {
+  font-size: 1.5em;
+}
+.reveal h3 {
+  font-size: 1.2em;
+}
+.reveal body {
+  font-family: 'Ubuntu', sans-serif;
+}
+.reveal code {
+  font-family: 'Ubuntu Mono', monospace;
+  background-color: transparent;
+}
+.reveal pre {
+  width: 100%;
+  background-color: transparent;
+}
+.reveal ol, .reveal dl, .reveal ul {
+  margin: 0 0 0 0;
+}
+.reveal blockquote {
+  margin: 0 0 0 0;
+  padding: 0 0 0 1em;
+}
+/* Remove shadows */
+.reveal section pre, .reveal section img {
+  box-shadow: none;
+  border: none;
+}
+
+/* Slide types */
+.reveal .center h1 {
+  text-align: center;
+}

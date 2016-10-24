@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+revealjs=reveal.js
+Rscript -e "knitr::knit('presentation.Rmd', 'presentation.md')"
+pandoc --section-divs -t revealjs -o $revealjs/index.html -V theme="simple" -c static/style.css -H static/font.html presentation.md
+
+if [ ! -e presentation.html ];
+then
+	ln -s $revealjs/index.html presentation.html
+fi
+
+while getopts "o?p?" opt; do
+		case "$opt" in
+				o)
+						open presentation.html
+						;;
+				p)
+						cd decktape
+						./phantomjs decktape.js reveal file:///Users/pierce/Research/Talks/studying-word-meanings/presentation.html ../output/Edmiston-MERI-2016.pdf
+						;;
+		esac
+done

@@ -1,0 +1,10 @@
+digraph {
+  rankdir=LR;
+  node[fontname=Helvetica, width=1];
+  cue -> delay -> picture -> question;
+  
+  cue[image="img/sound.png", label="", shape=none];
+  delay[shape=none];
+  question[shape=none, label="?"];
+  picture[shape=square];
+}
