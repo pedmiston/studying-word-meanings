@@ -8,13 +8,10 @@ The version of reveal.js needed to build this presentation is contained in a git
     git submodule update
     ./build -o  # build and open the presentation
 
-To save the html slides as a pdf, you need to install decktape. These are the steps required taken from the decktape repo.
+To save the html slides as a pdf, you need to install decktape. Decktape is also included as a submodule, and is installed by the commands above. Decktape also requires a forked version of phantomjs to run, which was downloaded with the following commands:
 
-    curl -L https://github.com/astefanutti/decktape/archive/v1.0.0.tar.gz | tar -xz --exclude phantomjs
-    cd decktape-1.0.0
     curl -L https://github.com/astefanutti/decktape/releases/download/v1.0.0/phantomjs-osx-cocoa-x86-64 -o phantomjs
     chmod +x phantomjs
-    cd ..
 
 Now you can build the slides to pdf as well.
 

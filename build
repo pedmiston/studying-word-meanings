@@ -49,7 +49,7 @@ done
 make_slides
 
 if [ "$save_as_pdf" == true ] ; then
-	$decktape/phantomjs $decktape/decktape.js \
+	./phantomjs $decktape/decktape.js \
 		reveal file://`pwd`/$html_name $pdf_name
 	target=$pdf_name
 fi

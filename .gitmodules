@@ -1,3 +1,6 @@
 [submodule "reveal.js"]
 	path = reveal.js
 	url = git@github.com:pedmiston/reveal.js
+[submodule "decktape"]
+	path = decktape
+	url = https://github.com/astefanutti/decktape
