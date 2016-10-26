@@ -5,15 +5,11 @@ author: "Pierce Edmiston"
 
 # How are word meanings represented in the brain?
 
-##
-
-
-
 <aside class="notes">
 I study how word meanings are represented in the brain. Specifically what I’m interested in is how word meanings are represented differently than other types of information or meaning that we learn from the environment around us.
 </aside>
 
-##
+
 
 <aside class="notes">
 An example I use a lot is the canonical dog. How is the meaning of the word "dog" represented in the brain and how is it different from the other information we know about dogs?
@@ -22,9 +18,7 @@ An example I use a lot is the canonical dog. How is the meaning of the word "dog
 <img src="figs/dog-1.png" style="display: block; margin: auto;" />
 
 <aside class="notes">
-You all know a lot about dogs: you know what they are and what they look like, and there are a few different ways I can get you to think about dogs. I can show you this picture of course but I can also just say the word “dog” and hearing this word will activate at least some of your knowledge about dogs.
-
-But I don’t need to use language, I bet I can get you to think about dogs by playing you this sound.
+You all know a lot about dogs: you know what they are and what they look like, and there are a few different ways I can get you to think about dogs. I can show you this picture of course but I can also just say the word “dog” and hearing this word will activate at least some of your knowledge about dogs. But I don’t need to use language, I bet I can get you to think about dogs by playing you this sound.
 </aside>
 
 <div style="text-align: center;">

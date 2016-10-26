@@ -5,7 +5,9 @@ author: "Pierce Edmiston"
 
 # How are word meanings represented in the brain?
 
-##
+<aside class="notes">
+I study how word meanings are represented in the brain. Specifically what I’m interested in is how word meanings are represented differently than other types of information or meaning that we learn from the environment around us.
+</aside>
 
 ```{r config, echo = FALSE, message = FALSE, warning = FALSE}
 library(knitr)
@@ -28,8 +30,6 @@ library(png)
 library(jpeg)
 library(grid)
 
-crotchet::read_all_graphviz_chunks("motivatedcues")
-
 read_chunk("R/motivated-cues.R")
 read_chunk("R/property-verification.R")
 read_chunk("R/orientation-discrimination.R")
@@ -37,12 +37,6 @@ read_chunk("R/orientation-discrimination.R")
 source("R/theme.R")
 gp <- gpar(fontfamily = "Consolas", fontsize = 18)
 ```
-
-<aside class="notes">
-I study how word meanings are represented in the brain. Specifically what I’m interested in is how word meanings are represented differently than other types of information or meaning that we learn from the environment around us.
-</aside>
-
-##
 
 <aside class="notes">
 An example I use a lot is the canonical dog. How is the meaning of the word "dog" represented in the brain and how is it different from the other information we know about dogs?
@@ -56,9 +50,7 @@ grid.text("dog -->", x = 0.3, gp = gp)
 ```
 
 <aside class="notes">
-You all know a lot about dogs: you know what they are and what they look like, and there are a few different ways I can get you to think about dogs. I can show you this picture of course but I can also just say the word “dog” and hearing this word will activate at least some of your knowledge about dogs.
-
-But I don’t need to use language, I bet I can get you to think about dogs by playing you this sound.
+You all know a lot about dogs: you know what they are and what they look like, and there are a few different ways I can get you to think about dogs. I can show you this picture of course but I can also just say the word “dog” and hearing this word will activate at least some of your knowledge about dogs. But I don’t need to use language, I bet I can get you to think about dogs by playing you this sound.
 </aside>
 
 <div style="text-align: center;">
@@ -87,6 +79,16 @@ What we did was two types of cues: verbal and nonverbal cues to arguably the sam
 ##
 
 ```{r picture-verification-task, engine = "dot", cache = FALSE}
+digraph {
+  rankdir=LR;
+  node[fontname=Helvetica, width=1, fontsize=20];
+  cue -> delay -> picture -> question;
+
+  cue[image="static/img/sound.png", label="", shape=none];
+  delay[shape=none];
+  question[shape=none, label="Y / N ?"];
+  picture[shape=square];
+}
 ```
 
 <aside class="notes">
@@ -139,6 +141,17 @@ So we ran people on a sound picture verification task where we varied the sound 
 ```
 
 ```{r picture-verification-task-simultaneous, engine = "dot"}
+digraph {
+  rankdir=LR;
+  node[fontname=Helvetica, width=1, fontsize=20];
+  picture -> question;
+  cue -> invis[style=invis];
+
+  cue[image="static/img/sound.png", label="", shape=none];
+  invis[style=invis];
+  question[shape=none, label="Y / N ?"];
+  picture[shape=square];
+}
 ```
 
 <aside class="notes">
