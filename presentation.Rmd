@@ -7,6 +7,7 @@ author: Pierce Edmiston
 
 ```{r config, echo = FALSE, message = FALSE, warning = FALSE}
 library(knitr)
+library(printr)
 opts_chunk$set(
   echo = FALSE,
   message = FALSE,
@@ -14,12 +15,16 @@ opts_chunk$set(
   dev = "png",
   fig.align = "center",
   fig.path = "figs/",
-  cache.path = ".cache"
+  cache = TRUE,
+  cache.path = ".cache/"
 )
 
-library(printr)
-library(crotchet)
-read_all_graphviz_chunks("motivatedcues")
+library(magrittr)
+library(png)
+library(jpeg)
+library(grid)
+
+crotchet::read_all_graphviz_chunks("motivatedcues")
 
 read_chunk("src/motivated-cues.R")
 read_chunk("src/property-verification.R")
@@ -31,21 +36,31 @@ I study how word meanings are represented in the brain. Specifically what I’m 
 </aside>
 
 ```{r dog, fig.cap = ""}
-library(magrittr)
-library(png)
-library(grid)
-
-dog <- "img/dog.png" %>% readPNG %>% rasterGrob
+dog <- "img/dog.png" %>% readPNG %>% rasterGrob(x = 0.6, width = 0.6)
 grid.newpage()
 grid.draw(dog)
+grid.text("dog -->", x = 0.3,
+          gp = gpar(fontfamily = "Consolas", fontsize = 20, fontface = "bold"))
 ```
 
-<audio src="http://sapir.psych.wisc.edu/meri/bark.wav" controls>
-
 <aside class="notes">
-An example I use a lot is the canonical dog. So you all know what dogs are and what they look like, and there are a few different ways I can get you to think about dogs -- different ways I can activate your knowledge about dogs. I can show you this picture of course but I can also just say the word “dog” and hearing this word will activate at least some of your knowledge about dogs.
+An example I use a lot is the canonical dog. How is the meaning of the word dog represented in the brain and how is it different from the other information we know about dogs?
+
+So you all know a lot about dogs, you know what they are and what they look like, and there are a few different ways I can get you to think about dogs -- different ways I can activate your knowledge about dogs. I can show you this picture of course but I can also just say the word “dog” and hearing this word will activate at least some of your knowledge about dogs.
 
 But I don’t need to use language, I bet I can get you all to think about dogs by playing you this sound.
+</aside>
+
+<div style="text-align: center;">
+  <audio src="http://sapir.psych.wisc.edu/meri/bark.wav" controls>
+</div>
+
+# "dog" vs `<bark>`
+
+What's the difference between verbal and nonverbal cues in activating the same knowledge?
+
+<aside class="notes">
+So what’s the difference between a dog bark and the word “dog”? What’s the difference between verbal and nonverbal means of activating the same knowledge? The first experiments I’m going to tell you about address this question.
 </aside>
 
 # Cues to the same concept
@@ -58,46 +73,74 @@ data.frame(
 ```
 
 <aside class="notes">
-So the first experiment I'm going to tell you about compares these two types of cues: verbal and nonverbal cues to arguably the same concept, like the word "dog" and the sound of a dog <bark>. Here are some of the other categories we included in this experiment.
-
-What's important to note is we've got both animal sounds and non-animal sounds, and that these differ in state.
+What we did was two types of cues: verbal and nonverbal cues to arguably the same concept, like the word "dog" and the sound of a dog <bark>.
 </aside>
-
-# Sound-picture congruence
-
-```{r sound-picture-congruence}
-library(jpeg)
-
-pictures <- c("guitar_acoustic", "guitar_electric") %>%
-  lapply(function (x) {
-    paste0(x, ".jpg") %>% file.path("img", .) %>% readJPEG
-  })
-grid.newpage()
-grid.draw(rasterGrob(pictures[[1]], x = 0.2, width = 0.8))
-grid.draw(rasterGrob(pictures[[2]], x = 0.8, width = 0.8))
-```
 
 # Picture verification task
 
 ##
 
-```{r picture-verification-task, engine = "dot"}
+```{r picture-verification-task, engine = "dot", cache = FALSE}
 ```
+
+<aside class="notes">
+To test this we used what is called a picture verification task. If you were a subject in this experiment, here is what you would have done. You'd be holding a game controller, and on each trial you'd hear some sound, like the word "dog" or the sound of a dog <bark>, and then you'd see a picture, either a picture of a dog, or a picture of something else. And you'd have to decide does what I see match what I heard -- is this a picture of a dog, or is it a picture of something else? If they match you press one button, and if they don't, you press another button. And you do this 400 times. (Fun game!).
+</aside>
+
+## Label advantage in the picture verification
+
+![Lupyan & Thompson-Schill 2012 JEP:G](img/lupyan_thompsonschill_2012_jepg/label_advantage.png)
+
+<aside class="notes">
+From some previous work by my advisor Gary Lupyan and Sharon Thompson-Schill we know that people are overall faster at this task when cued with words than with nonverbal environmental sounds. And this actually isn't just a product of not being given enough time to process the nonverbal sounds. If you give people more time between the cue and the picture, the label advantage actually gets a bit bigger. And it isn't due to just having more experience with words than the sounds either. People have no problem naming the sounds when they are played all by themselves, and when you make people learn new words and new sounds for "aliens and alien musical instruments" you still see some advantages of words over nonverbal equivalents.
+</aside>
+
+## Words are unmotivated cues
+
+```{r sound-picture-congruence}
+pictures <- c("guitar_acoustic", "guitar_electric") %>%
+  lapply(function (x) paste0(x, ".jpg") %>% file.path("img", .) %>% readJPEG)
+grid.newpage()
+grid.draw(rasterGrob(pictures[[1]], x = 0.2, width = 0.8))
+grid.draw(rasterGrob(pictures[[2]], x = 0.8, width = 0.8))
+grid.text("< sound picture congruence >",
+          gp = gpar(fontfamily = "Consolas", fontsize = 12, fontface = "bold"))
+```
+
+<aside class="notes">
+So why are words better then sounds? One thing we've argued is that words are unmotivated cues. Thinking back to some of the categories we are talking about (e.g., dog, cat, chainsaw, bowling ball), different pictures of these objects can vary in degree to which they resemble the source of the sound.
+
+These guitars are a good example. I can say the word "guitar" and you don't know which guitar I'm talking about. It's unmotivated. However, if I play you the sound of one of these guitars, you are pretty likely to be able to identify which one it came from. Nonverbal sounds are motivated to refer to a particular source.
+
+We can think about this as a dimension of sound-picture congruence, basically. It's the idea that when I hear a nonverbal sound, I can take a given picture and measure how much the sound looks like it came from the picture, but I can't do that with the word guitar.
+</aside>
 
 ##
 
 ```{r motivated-cues-exp1}
 ```
 
+<aside class="notes">
+</aside>
+
 ##
 
 ![](img/motivated-cues/exp2-simultaneous.jpg)
+
+<aside class="notes">
+</aside>
 
 ##
 
 ![](img/motivated-cues/exp3.jpg)
 
+<aside class="notes">
+</aside>
+
 # So... word meanings are symbolic?
+
+<aside class="notes">
+</aside>
 
 # Property verification
 
@@ -105,10 +148,16 @@ grid.draw(rasterGrob(pictures[[2]], x = 0.8, width = 0.8))
 
 ![](img/visual-knowledge/property-verification/trial-structure.png)
 
+<aside class="notes">
+</aside>
+
 ##
 
 ```{r property-verification-results}
 ```
+
+<aside class="notes">
+</aside>
 
 # Orientation discrimination
 
@@ -116,6 +165,14 @@ grid.draw(rasterGrob(pictures[[2]], x = 0.8, width = 0.8))
 
 ![](img/visual-knowledge/orientation-discrimination/trial-structure.png)
 
+<aside class="notes">
+</aside>
+
 ##
 
 ![](img/visual-knowledge/orientation-discrimination/results.png)
+
+<aside class="notes">
+</aside>
+
+# Conclusions

@@ -1,29 +1,35 @@
+/* Set sizes (slides, texts) */
 body {
-  height: 80%;
+  height: 100%;
 }
-.reveal .slides {
-  text-align: left;
-}
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-  font-family: 'Lato', sans-serif;
-  text-transform: none;
-  text-shadow: none;
-}
-.reveal h1 {
+.reveal h1.title {
   font-size: 2em;
 }
+.reveal h1 {
+  font-size: 1.6em;
+}
 .reveal h2 {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 .reveal h3 {
   font-size: 1.2em;
 }
-.reveal body {
-  font-family: 'Ubuntu', sans-serif;
+
+/* Alignment */
+.reveal h1 {
+  text-align: center;
 }
-.reveal code {
-  font-family: 'Ubuntu Mono', monospace;
-  background-color: transparent;
+.reveal h1.title {
+  text-align: left;
+}
+.reveal .slides {
+  text-align: left;
+}
+
+/* Remove default styles */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  text-transform: none;
+  text-shadow: none;
 }
 .reveal pre {
   width: 100%;
@@ -36,13 +42,15 @@ body {
   margin: 0 0 0 0;
   padding: 0 0 0 1em;
 }
-/* Remove shadows */
 .reveal section pre, .reveal section img {
   box-shadow: none;
   border: none;
 }
 
-/* Slide types */
-.reveal .center h1 {
-  text-align: center;
+/* Font */
+.reveal body, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: 'Droid Sans', sans-serif;
+}
+.reveal code {
+  font-family: 'Ubuntu Mono', monospace;
 }

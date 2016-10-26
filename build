@@ -1,21 +1,59 @@
 #!/usr/bin/env bash
+html_name=Edmiston-MERI-2016.html
+pdf_name=Edmiston-MERI-2016.pdf
+target=$html_name
+
 revealjs=reveal.js
-Rscript -e "knitr::knit('presentation.Rmd', 'presentation.md')"
-pandoc --section-divs -t revealjs -o $revealjs/index.html -V theme="simple" -c static/style.css -H static/font.html presentation.md
+decktape=decktape-1.0.0
+cache=.cache
+figs=figs
 
-if [ ! -e presentation.html ];
-then
-	ln -s $revealjs/index.html presentation.html
-fi
+open_after=false
+save_as_pdf=false
 
-while getopts "o?p?" opt; do
+function make_slides {
+	# rmarkdown to markdown
+	Rscript -e "knitr::knit('presentation.Rmd', 'presentation.md')"
+
+	# markdown to html
+	pandoc -o $revealjs/index.html \
+		-t revealjs --section-divs -V theme="simple" \
+		-c static/style.css -H static/font.html \
+		presentation.md
+
+	if [ ! -e "$html_name" ] ; then
+		ln -s $revealjs/index.html $html_name
+	fi
+}
+
+while getopts ":cfpo" opt; do
 		case "$opt" in
-				o)
-						open presentation.html
+				c)
+						rm -rf $cache
+						;;
+				f)
+						rm -rf $figs
 						;;
 				p)
-						cd decktape
-						./phantomjs decktape.js reveal file:///Users/pierce/Research/Talks/studying-word-meanings/presentation.html ../output/Edmiston-MERI-2016.pdf
+						save_as_pdf=true
+						;;
+				o)
+						open_after=true
+						;;
+				\?)
+						echo "Invalid option: -$OPTARG" >&2
 						;;
 		esac
 done
+
+make_slides
+
+if [ "$save_as_pdf" == true ] ; then
+	$decktape/phantomjs $decktape/decktape.js \
+		reveal file://`pwd`/$html_name $pdf_name
+	target=$pdf_name
+fi
+
+if [ "$open_after" = true ] ; then
+	open "$target"
+fi
