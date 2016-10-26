@@ -1,6 +1,6 @@
 ---
-title: Studying word meanings through the eyes
-author: Pierce Edmiston
+title: "Studying word meanings through the eyes"
+author: "Pierce Edmiston"
 ---
 
 # How are word meanings represented in the brain?
@@ -42,41 +42,39 @@ gp <- gpar(fontfamily = "Consolas", fontsize = 18)
 I study how word meanings are represented in the brain. Specifically what I’m interested in is how word meanings are represented differently than other types of information or meaning that we learn from the environment around us.
 </aside>
 
-## 
+##
+
+<aside class="notes">
+An example I use a lot is the canonical dog. How is the meaning of the word "dog" represented in the brain and how is it different from the other information we know about dogs?
+</aside>
 
 ```{r dog, fig.cap = ""}
-dog <- "img/dog.png" %>% readPNG %>% rasterGrob(x = 0.6, width = 0.5)
+dog <- "static/img/dog.png" %>% readPNG %>% rasterGrob(x = 0.6, width = 0.5)
 grid.newpage()
 grid.draw(dog)
 grid.text("dog -->", x = 0.3, gp = gp)
 ```
 
 <aside class="notes">
-An example I use a lot is the canonical dog. How is the meaning of the word "dog" represented in the brain and how is it different from the other information we know about dogs?
+You all know a lot about dogs: you know what they are and what they look like, and there are a few different ways I can get you to think about dogs. I can show you this picture of course but I can also just say the word “dog” and hearing this word will activate at least some of your knowledge about dogs.
 
-So you all know a lot about dogs, you know what they are and what they look like, and there are a few different ways I can get you to think about dogs. I can show you this picture of course but I can also just say the word “dog” and hearing this word will activate at least some of your knowledge about dogs.
-
-But I don’t need to use language, I bet I can get you all to think about dogs by playing you this sound.
+But I don’t need to use language, I bet I can get you to think about dogs by playing you this sound.
 </aside>
 
 <div style="text-align: center;">
   <audio src="http://sapir.psych.wisc.edu/meri/bark.wav" controls>
 </div>
 
-# Comparing different cues to the same concept
-
-##
+# Different cues to the same concept
 
 <aside class="notes">
-So what’s the difference between a dog bark and the word “dog”? What’s the difference between verbal and nonverbal means of activating the same knowledge? The first experiments I’m going to tell you about address this question.
+So what’s the difference between a dog <bark> and the word “dog”? What’s the difference between verbal and nonverbal cues for activating the same underlying knowledge? The first experiments I’m going to tell you about address this question.
 </aside>
-
-##
 
 ```{r example-cues, results = 'asis'}
 data.frame(
-  word = c("dog", "cat", "chainsaw", "bowling ball"),
-  sound = c("`<bark>`", "`<meow>`", "`<revving>`", "`<crashing pins>`")
+  word = paste0("\"", c("dog", "cat", "chainsaw", "bowling ball"), "\""),
+  sound = paste0("`<", c("bark", "meow", "revving", "crashing pins"), ">`")
 )
 ```
 
@@ -99,8 +97,8 @@ To test this we used what is called a picture verification task. If you were a s
 
 ```{r label_advantage}
 grid.newpage()
-grid.draw("img/lupyan_thompsonschill_2012_jepg/fig_1a.png" %>% readPNG %>% rasterGrob(height = 0.8))
-grid.text("Lupyan & Thompson-Schill 2012 JEP:G", y = 0.9, gp = gp)
+grid.draw("static/img/lupyan_thompsonschill_2012_jepg/fig_1a.png" %>% readPNG %>% rasterGrob(height = 0.8))
+grid.text("Lupyan & Thompson-Schill 2012 JEP:G", y = 0.95, gp = gp)
 ```
 
 <aside class="notes">
@@ -111,10 +109,10 @@ From some previous work by my advisor Gary Lupyan and Sharon Thompson-Schill we 
 
 ```{r sound-picture-congruence}
 pictures <- c("guitar_acoustic", "guitar_electric") %>%
-  lapply(function (x) paste0(x, ".jpg") %>% file.path("img", .) %>% readJPEG)
+  lapply(function (x) paste0(x, ".jpg") %>% file.path("static/img", .) %>% readJPEG)
 grid.newpage()
-grid.draw(rasterGrob(pictures[[1]], x = 0.12, width = 0.5))
-grid.draw(rasterGrob(pictures[[2]], x = 0.88, width = 0.5))
+grid.draw(rasterGrob(pictures[[1]], x = 0.10, width = 0.5))
+grid.draw(rasterGrob(pictures[[2]], x = 0.90, width = 0.5))
 grid.text("< sound picture congruence >", gp = gp)
 ```
 
@@ -137,6 +135,9 @@ So we ran people on a sound picture verification task where we varied the sound 
 
 ##
 
+```{r picture-verification-task, engine = "dot"}
+```
+
 ```{r picture-verification-task-simultaneous, engine = "dot"}
 ```
 
@@ -152,19 +153,38 @@ So we ran people on a sound picture verification task where we varied the sound 
 <aside class="notes">
 </aside>
 
-# So... word meanings are symbolic?
+# Are word meanings perfectly symbolic?
 
 <aside class="notes">
 </aside>
 
 # Property verification
 
-##
-
-![](img/visual-knowledge/property-verification/trial-structure.png)
+```{r property-verification-trial-structure}
+trial_structure <- readPNG("static/img/property-verification-trial-structure.png") %>%
+  rasterGrob
+grid.newpage()
+grid.draw(trial_structure)
+```
 
 <aside class="notes">
 </aside>
+
+#
+
+##
+
+<div style="text-align: center">
+  <video src="http://sapir.psych.wisc.edu/meri/big-teeth-tiger-no-mask.mov" controls></video>
+</div>
+
+##
+
+<div style="text-align: center">
+  <video src="http://sapir.psych.wisc.edu/meri/longneck-swan-with-mask.mov" controls></video>
+</div>
+
+# Property verification
 
 ##
 
@@ -178,7 +198,12 @@ So we ran people on a sound picture verification task where we varied the sound 
 
 ##
 
-![](img/visual-knowledge/orientation-discrimination/trial-structure.png)
+```{r orientation-discrimination-trial-structure}
+trial_structure <- readPNG("static/img/orientation-discrimination-trial-structure.png") %>%
+  rasterGrob
+grid.newpage()
+grid.draw(trial_structure)
+```
 
 <aside class="notes">
 </aside>

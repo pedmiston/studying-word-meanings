@@ -11,10 +11,6 @@ col.label <- colors[["orange"]]
 col.incongr <- colors[["blue"]]
 col.congr <- colors[["green"]]
 
-library(RColorBrewer)
-cols.labels <- rev(brewer.pal(5, 'Reds')[2:5])
-cols.sounds <- rev(brewer.pal(5, 'Blues')[2:5])
-
 library(motivatedcues)
 data("exp1_final_rep")
 exp1 <- exp1_final_rep
@@ -71,24 +67,24 @@ plotvals$lwr <- plotvals$rt - plotvals$se
 # reverse key to reflect order in chart
 plotvals$cue_typeC <- plotvals$cue_typeC * -1
 
-typ.all <- ggplot(plotvals, aes(x=zSound)) +
-  geom_smooth(aes(y=rt, ymin=lwr, ymax=upr, color=factor(cue_typeC), linetype=factor(cue_typeC)),
-              data=plotvals[plotvals$delayC == -0.5, ],
-              stat='identity', lwd=0.7) +
-  geom_smooth(aes(y=rt, ymin=lwr, ymax=upr, color=factor(cue_typeC), linetype=factor(cue_typeC)),
-              data=plotvals[plotvals$delayC == 0.5, ],
-              stat='identity', lwd=0.7) +
+# label lines (instead of using key)
+line_labels <- data.frame(
+  label = c("Sound", "Word"),
+  zSound = c(0, 0),
+  rt = c(709, 662),
+  angle = c(-16, 8)
+)
+
+typ.all <- ggplot(plotvals %>% filter(delayC == -0.5), aes(x=zSound)) +
+  geom_smooth(aes(y=rt, ymin=lwr, ymax=upr, color=factor(cue_typeC)),
+              stat='identity', lwd=1.5) +
   geom_rug(data=ratings, sides='b', stat='identity') +
-  coord_cartesian(ylim=c(400, 750)) +
-  scale_x_continuous('Sound-Image Congruence (z-score)', breaks=seq(-1.5, 1.5, by=0.5)) +
+  coord_cartesian(ylim=c(580, 750)) +
+  scale_x_continuous('Sound picture congruence', breaks=seq(-1.5, 1.5, by=0.5)) +
   scale_y_continuous('Verification Speed (ms)', breaks=seq(400,750,by=50)) +
-  scale_color_manual('Cue Type', labels=c('Sound','Label'), values=c(col.congr, col.label)) +
-  scale_linetype_manual('Cue Type', labels=c('Sound','Label'), values=c(2,1)) +
-  annotate('text', label='Simultaneous', x=0, y=740) +
-  annotate('text', label='Delayed (400 msec)', x=0, y=540) +
-  theme_classic(base_size=12) +
-  theme(legend.position=c(0.85, 0.59),
-        legend.key=element_rect(color='white', fill='white'),
-        axis.ticks.length=unit(10, units='points'))
+  scale_color_manual('Cue Type', labels=c('Sound','Label'), values=c(colors[["blue"]], colors[["green"]])) +
+  geom_text(aes(y = rt, label = label, angle = angle), data = line_labels) +
+  base_theme +
+  guides(lty = "none", color = "none")
 
 print(typ.all)

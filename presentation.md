@@ -1,6 +1,6 @@
 ---
-title: Studying word meanings through the eyes
-author: Pierce Edmiston
+title: "Studying word meanings through the eyes"
+author: "Pierce Edmiston"
 ---
 
 # How are word meanings represented in the brain?
@@ -13,39 +13,37 @@ author: Pierce Edmiston
 I study how word meanings are represented in the brain. Specifically what I’m interested in is how word meanings are represented differently than other types of information or meaning that we learn from the environment around us.
 </aside>
 
-## 
+##
+
+<aside class="notes">
+An example I use a lot is the canonical dog. How is the meaning of the word "dog" represented in the brain and how is it different from the other information we know about dogs?
+</aside>
 
 <img src="figs/dog-1.png" style="display: block; margin: auto;" />
 
 <aside class="notes">
-An example I use a lot is the canonical dog. How is the meaning of the word "dog" represented in the brain and how is it different from the other information we know about dogs?
+You all know a lot about dogs: you know what they are and what they look like, and there are a few different ways I can get you to think about dogs. I can show you this picture of course but I can also just say the word “dog” and hearing this word will activate at least some of your knowledge about dogs.
 
-So you all know a lot about dogs, you know what they are and what they look like, and there are a few different ways I can get you to think about dogs. I can show you this picture of course but I can also just say the word “dog” and hearing this word will activate at least some of your knowledge about dogs.
-
-But I don’t need to use language, I bet I can get you all to think about dogs by playing you this sound.
+But I don’t need to use language, I bet I can get you to think about dogs by playing you this sound.
 </aside>
 
 <div style="text-align: center;">
   <audio src="http://sapir.psych.wisc.edu/meri/bark.wav" controls>
 </div>
 
-# Comparing different cues to the same concept
-
-##
+# Different cues to the same concept
 
 <aside class="notes">
-So what’s the difference between a dog bark and the word “dog”? What’s the difference between verbal and nonverbal means of activating the same knowledge? The first experiments I’m going to tell you about address this question.
+So what’s the difference between a dog <bark> and the word “dog”? What’s the difference between verbal and nonverbal cues for activating the same underlying knowledge? The first experiments I’m going to tell you about address this question.
 </aside>
 
-##
 
-
-|word         |sound             |
-|:------------|:-----------------|
-|dog          |`<bark>`          |
-|cat          |`<meow>`          |
-|chainsaw     |`<revving>`       |
-|bowling ball |`<crashing pins>` |
+|word           |sound             |
+|:--------------|:-----------------|
+|"dog"          |`<bark>`          |
+|"cat"          |`<meow>`          |
+|"chainsaw"     |`<revving>`       |
+|"bowling ball" |`<crashing pins>` |
 
 <aside class="notes">
 What we did was two types of cues: verbal and nonverbal cues to arguably the same concept, like the word "dog" and the sound of a dog <bark>.
@@ -91,6 +89,8 @@ So we ran people on a sound picture verification task where we varied the sound 
 
 ##
 
+<img src="figs/picture-verification-task-1.png" title="plot of chunk picture-verification-task" alt="plot of chunk picture-verification-task" style="display: block; margin: auto;" />
+
 <img src="figs/picture-verification-task-simultaneous-1.png" title="plot of chunk picture-verification-task-simultaneous" alt="plot of chunk picture-verification-task-simultaneous" style="display: block; margin: auto;" />
 
 <aside class="notes">
@@ -104,19 +104,33 @@ So we ran people on a sound picture verification task where we varied the sound 
 <aside class="notes">
 </aside>
 
-# So... word meanings are symbolic?
+# Are word meanings perfectly symbolic?
 
 <aside class="notes">
 </aside>
 
 # Property verification
 
-##
-
-![](img/visual-knowledge/property-verification/trial-structure.png)
+<img src="figs/property-verification-trial-structure-1.png" title="plot of chunk property-verification-trial-structure" alt="plot of chunk property-verification-trial-structure" style="display: block; margin: auto;" />
 
 <aside class="notes">
 </aside>
+
+#
+
+##
+
+<div style="text-align: center">
+  <video src="http://sapir.psych.wisc.edu/meri/big-teeth-tiger-no-mask.mov" controls></video>
+</div>
+
+##
+
+<div style="text-align: center">
+  <video src="http://sapir.psych.wisc.edu/meri/longneck-swan-with-mask.mov" controls></video>
+</div>
+
+# Property verification
 
 ##
 
@@ -129,7 +143,7 @@ So we ran people on a sound picture verification task where we varied the sound 
 
 ##
 
-![](img/visual-knowledge/orientation-discrimination/trial-structure.png)
+<img src="figs/orientation-discrimination-trial-structure-1.png" title="plot of chunk orientation-discrimination-trial-structure" alt="plot of chunk orientation-discrimination-trial-structure" style="display: block; margin: auto;" />
 
 <aside class="notes">
 </aside>
