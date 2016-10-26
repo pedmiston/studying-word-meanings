@@ -260,4 +260,4 @@ grid.draw(trial_structure)
 <aside class="notes">
 </aside>
 
-# Conclusions
+# A paradox?
