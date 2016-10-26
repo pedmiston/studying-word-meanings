@@ -1,11 +1,8 @@
+source("R/theme.R")
+
 # ---- property-verification-results
 library(dplyr)
 library(ggplot2)
-
-colors <- RColorBrewer::brewer.pal(4, "Set2")
-names(colors) <- c("blue", "orange", "green", "pink")
-base_theme <- theme_minimal() +
-  theme(axis.ticks = element_blank())
 
 library(propertyverificationdata)
 data("question_first")

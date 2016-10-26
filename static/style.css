@@ -25,6 +25,9 @@ body {
 .reveal .slides {
   text-align: left;
 }
+.reveal .slides figcaption {
+  text-align: center;
+}
 
 /* Remove default styles */
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
