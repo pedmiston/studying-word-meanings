@@ -23,6 +23,8 @@ You all know a lot about dogs: you know what they are and what they look like, a
 
 <div style="text-align: center;">
   <audio src="http://sapir.psych.wisc.edu/meri/bark.wav" controls>
+    [Bark](http://sapir.psych.wisc.edu/meri/bark.wav)
+  </audio>
 </div>
 
 # Different cues to the same concept
@@ -71,8 +73,12 @@ These guitars are a good example. I can say the word "guitar" and you don't know
 
 <div style="text-align: center">
   <audio src="http://sapir.psych.wisc.edu/meri/acoustic_guitar.wav" controls>
+    [Guitar 1](http://sapir.psych.wisc.edu/meri/acoustic_guitar.wav)
+  </audio>
   <br />
   <audio src="http://sapir.psych.wisc.edu/meri/electric_guitar.wav" controls>
+    [Guitar 2](http://sapir.psych.wisc.edu/meri/electric_guitar.wav)
+  </audio>
 </div>
 
 <aside class="notes">
@@ -138,7 +144,9 @@ Here is a sample trial. First you'll get a question, then they'll be a delay, an
 </aside>
 
 <div style="text-align: center">
-  <video src="http://sapir.psych.wisc.edu/meri/big-teeth-tiger-no-mask.mov" controls></video>
+  <video src="http://sapir.psych.wisc.edu/meri/big-teeth-tiger-no-mask.mov" controls>
+    [Sample trial 1](http://sapir.psych.wisc.edu/meri/big-teeth-tiger-no-mask.mov)
+  </video>
 </div>
 
 ##
@@ -148,7 +156,9 @@ Here's another trial, and this shows the visual interference manipulation.
 </aside>
 
 <div style="text-align: center">
-  <video src="http://sapir.psych.wisc.edu/meri/longneck-swan-with-mask.mov" controls></video>
+  <video src="http://sapir.psych.wisc.edu/meri/longneck-swan-with-mask.mov" controls>
+    [Sample trial 2](http://sapir.psych.wisc.edu/meri/longneck-swan-with-mask.mov)
+  </video>
 </div>
 
 # Property verification
