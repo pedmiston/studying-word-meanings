@@ -132,6 +132,8 @@ These guitars are a good example. I can say the word "guitar" and you don't know
 We can think about this as a dimension of **sound-picture congruence**. Basically it's the idea that when I hear a nonverbal sound, it has some physical source out there in the world, and we wanted to know whether having a particular source sort of constrained the meaning of the sound even when people are specifically told to treat all guitars the same.
 </aside>
 
+#
+
 ##
 
 ```{r motivated-cues-exp1}
