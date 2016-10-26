@@ -150,7 +150,7 @@ So we ran people on a sound picture verification task where we varied the sound 
 
 ##
 
-![](img/visual-knowledge/orientation-discrimination/results.png)
+<img src="figs/orientation-discrimination-exp1-1.png" title="plot of chunk orientation-discrimination-exp1" alt="plot of chunk orientation-discrimination-exp1" style="display: block; margin: auto;" />
 
 <aside class="notes">
 </aside>

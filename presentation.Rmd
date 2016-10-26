@@ -32,7 +32,7 @@ crotchet::read_all_graphviz_chunks("motivatedcues")
 
 read_chunk("R/motivated-cues.R")
 read_chunk("R/property-verification.R")
-# read_chunk("R/orientation-discrimination.R")
+read_chunk("R/orientation-discrimination.R")
 
 source("R/theme.R")
 gp <- gpar(fontfamily = "Consolas", fontsize = 18)
@@ -210,7 +210,8 @@ grid.draw(trial_structure)
 
 ##
 
-![](img/visual-knowledge/orientation-discrimination/results.png)
+```{r orientation-discrimination-exp1}
+```
 
 <aside class="notes">
 </aside>
