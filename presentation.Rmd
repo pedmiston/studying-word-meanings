@@ -280,6 +280,6 @@ grid.text("concrete\niconic\nmodal", x = 0.88, y = 0.5, gp = gp)
 Pierce Edmiston  
 <pedmiston@wisc.edu>
 
-[<small>Slides: github.com/pedmiston/studying-word-meanings</small>](https://github.com/pedmiston/studying-word-meaings)
+[<small>Slides: github.com/pedmiston/studying-word-meanings</small>](https://github.com/pedmiston/studying-word-meaings)  
 [<small>Edmiston & Lupyan (2015). What makes words special? Words as unmotivated cues. _Cognition_.</small>](http://sapir.psych.wisc.edu/papers/edmiston_lupyan_2015_motivated.pdf)  
 [<small>Edmiston & Lupyan (2016). Visual interference disrupts visual knowledge. _Journal of Memory and Language_.</small>](http://sapir.psych.wisc.edu/papers/edmiston_lupyan_JML.pdf)

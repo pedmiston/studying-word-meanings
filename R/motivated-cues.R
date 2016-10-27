@@ -16,7 +16,7 @@ data("exp1_final_rep")
 exp1 <- exp1_final_rep
 
 trial_type_levels <- c("label", "congruent", "incongruent")
-trial_type_labels <- c("Word", "Congruent sound", "Incongruent sound")
+trial_type_labels <- c("Word", "Congruent", "Incongruent")
 
 exp1$trial_type <- factor(exp1$trial_type, levels = trial_type_levels, ordered = T)
 exp1$exp <- factor(exp1$exp, levels=c('tyi','tyo-rep'), ordered=T)
@@ -73,7 +73,7 @@ line_labels <- data.frame(
   label = c("Sound", "Word"),
   cue_typeC = factor(c(-0.5, 0.5)),
   zSound = c(0, 0),
-  rt = c(714, 658),
+  rt = c(724, 648),
   angle = c(0, 0)
 )
 

@@ -183,6 +183,6 @@ Our prediction was that if the knowledge of what things look like is represented
 Pierce Edmiston  
 <pedmiston@wisc.edu>
 
-[<small>Slides: github.com/pedmiston/studying-word-meanings</small>](https://github.com/pedmiston/studying-word-meaings)
+[<small>Slides: github.com/pedmiston/studying-word-meanings</small>](https://github.com/pedmiston/studying-word-meaings)  
 [<small>Edmiston & Lupyan (2015). What makes words special? Words as unmotivated cues. _Cognition_.</small>](http://sapir.psych.wisc.edu/papers/edmiston_lupyan_2015_motivated.pdf)  
 [<small>Edmiston & Lupyan (2016). Visual interference disrupts visual knowledge. _Journal of Memory and Language_.</small>](http://sapir.psych.wisc.edu/papers/edmiston_lupyan_JML.pdf)
