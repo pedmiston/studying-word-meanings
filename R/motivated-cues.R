@@ -27,7 +27,8 @@ exp1.bar$trial_type <- factor(exp1.bar$trial_type, levels = trial_type_levels, l
 dodge = position_dodge(width=0.9)
 plot.exp1 <- ggplot(exp1.bar, aes(x=exp, y=rt, fill=trial_type)) +
   geom_bar(position=dodge, stat='identity', alpha = default_alpha) +
-  geom_text(aes(y = 400, label=trial_type), angle = 90, position = dodge, hjust = 0) +
+  geom_text(aes(y = 400, label=trial_type), angle = 90, position = dodge, hjust = 0,
+            size = text_label_size) +
   geom_errorbar(aes(ymin=rt-ci, ymax=rt+ci), position=dodge, width=0.4, size=0.5) +
   coord_cartesian(ylim=c(400,700)) +
   scale_x_discrete('', labels=c('Experiment 1A', 'Experiment 1B')) +
@@ -70,9 +71,10 @@ plotvals$cue_typeC <- plotvals$cue_typeC * -1
 # label lines (instead of using key)
 line_labels <- data.frame(
   label = c("Sound", "Word"),
+  cue_typeC = factor(c(-0.5, 0.5)),
   zSound = c(0, 0),
-  rt = c(709, 662),
-  angle = c(-16, 8)
+  rt = c(714, 658),
+  angle = c(0, 0)
 )
 
 typ.all <- ggplot(plotvals %>% filter(delayC == -0.5), aes(x=zSound)) +
@@ -83,7 +85,7 @@ typ.all <- ggplot(plotvals %>% filter(delayC == -0.5), aes(x=zSound)) +
   scale_x_continuous('Sound picture congruence', breaks=seq(-1.5, 1.5, by=0.5)) +
   scale_y_continuous('Verification Speed (ms)', breaks=seq(400,750,by=50)) +
   scale_color_manual('Cue Type', labels=c('Sound','Label'), values=c(colors[["blue"]], colors[["green"]])) +
-  geom_text(aes(y = rt, label = label, angle = angle), data = line_labels) +
+  geom_text(aes(y = rt, label = label, angle = angle, color = cue_typeC), data = line_labels, size = text_label_size) +
   base_theme +
   guides(lty = "none", color = "none")
 
