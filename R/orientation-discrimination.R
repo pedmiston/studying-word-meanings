@@ -183,5 +183,6 @@ labeled_gg <- magnet_gg +
             size = 0.5, data = label_lines) +
   coord_cartesian(ylim = y_lim, xlim = x_lim - 0.2) +
   scale_x_continuous("", breaks = c(-0.4, 0.4),
-                     labels = c("Blank screen", "Visual interference"))
+                     labels = c("Blank screen", "Visual interference")) +
+  labs(title = "Visual interference disrupts\nverbal cueing")
 labeled_gg

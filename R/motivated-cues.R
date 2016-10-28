@@ -32,9 +32,10 @@ plot.exp1 <- ggplot(exp1.bar, aes(x=exp, y=rt, fill=trial_type)) +
   geom_errorbar(aes(ymin=rt-ci, ymax=rt+ci), position=dodge, width=0.4, size=0.5) +
   coord_cartesian(ylim=c(400,700)) +
   scale_x_discrete('', labels=c('Experiment 1A', 'Experiment 1B')) +
-  scale_y_continuous('Verification Speed (ms)', breaks=seq(400,700,by=50)) +
+  scale_y_continuous('Reaction time (ms)', breaks=seq(400,700,by=50)) +
   scale_fill_manual('Cue Type', labels=c('Label','Congruent Sound', 'Incongruent Sound'),
                     values=c(col.label, col.congr, col.incongr)) +
+  labs(title = "Unmotivated cues lead to\nfaster picture verification") +
   base_theme +
   theme(legend.position = "none")
 
@@ -83,9 +84,10 @@ typ.all <- ggplot(plotvals %>% filter(delayC == -0.5), aes(x=zSound)) +
   geom_rug(data=ratings, sides='b', stat='identity') +
   coord_cartesian(ylim=c(580, 750)) +
   scale_x_continuous('Sound picture congruence', breaks=seq(-1.5, 1.5, by=0.5)) +
-  scale_y_continuous('Verification Speed (ms)', breaks=seq(400,750,by=50)) +
-  scale_color_manual('Cue Type', labels=c('Sound','Label'), values=c(colors[["blue"]], colors[["green"]])) +
+  scale_y_continuous('Reaction time (ms)', breaks=seq(400,750,by=50)) +
+  scale_color_manual(values=c(colors[["blue"]], colors[["green"]])) +
   geom_text(aes(y = rt, label = label, angle = angle, color = cue_typeC), data = line_labels, size = text_label_size) +
+  labs(title = "Reducing the label advantage\non simultaneous trials") +
   base_theme +
   guides(lty = "none", color = "none")
 
