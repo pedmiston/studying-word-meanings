@@ -1,17 +1,29 @@
 # Studying word meanings through the eyes
 
+This is the repo for a talk I'm giving at the McPherson Eye Research Institute's Research-at-a-glance event.
+
+## Papers
+
+[Edmiston & Lupyan (2015). What makes words special? Words as unmotivated cues. _Cognition_.](http://sapir.psych.wisc.edu/papers/edmiston_lupyan_2015_motivated.pdf)  
+[Edmiston & Lupyan (2016). Visual interference disrupts visual knowledge. _Journal of Memory and Language_.](http://sapir.psych.wisc.edu/papers/edmiston_lupyan_JML.pdf)
+
+## Experiments
+
+For the materials, data, and analyses, check out the following github repos.
+
+<https://github.com/lupyanlab/motivated-cues>  
+<https://github.com/lupyanlab/property-verification>  
+<https://github.com/lupyanlab/orientation-discrimination>
+
 ## Data
 
-The data presented in this talk is available as a set of R packages that can be installed from github.
+If you just want data, it's available in R packages (wrappers around the data and associated functions) that can be installed from github.
 
 ```R
 library(devtools)
-install_github("lupyanlab/motivated-cues",
-               subdir = "motivatedcues")
-install_github("lupyanlab/property-verification",
-               subdir = "propertyverificationdata")
-install_github("lupyanlab/orientation-discrimination",
-               subdir = "orientationdiscrimination")
+install_github("lupyanlab/motivated-cues", subdir = "motivatedcues")
+install_github("lupyanlab/property-verification", subdir = "propertyverificationdata")
+install_github("lupyanlab/orientation-discrimination", subdir = "orientationdiscrimination")
 ```
 
 ## Build
