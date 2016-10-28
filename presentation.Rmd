@@ -68,11 +68,11 @@ An example I use a lot is the canonical dog. I can get you to think about dogs b
 
 <div style="text-align: center;">
   <audio src="http://sapir.psych.wisc.edu/meri/dog.wav" controls>
-    ["dog"](http://sapir.psych.wisc.edu/meri/dog.wav)
+    [dog](http://sapir.psych.wisc.edu/meri/dog.wav)
   </audio>
   <br />
   <audio src="http://sapir.psych.wisc.edu/meri/bark.wav" controls>
-    [`<bark>`](http://sapir.psych.wisc.edu/meri/bark.wav)
+    [bark](http://sapir.psych.wisc.edu/meri/bark.wav)
   </audio>
 </div>
 
@@ -206,7 +206,7 @@ And here are the results. I'm showing you response times for the simultaneous tr
 - But how abstract?
 
 <aside class="notes">
-What this suggests is that one of the ways words activate meaning differently from other types of cues is that they are more symbolic and categorical, that they don't have to refer to a particular member of a category, and this helps when you are doing something like categorization. You might be asking yourself, why is this surprising? Don't we already know that word meanings are abstract?
+What this suggests is that one of the ways words activate meaning differently from other types of cues is that they are more abstract and symbolic, that they don't have to refer to a particular member of a category, and this helps when you are doing something like categorization. You might be asking yourself, why is this surprising? Don't we already know that word meanings are abstract?
 
 Well, what is surprising is that it seems **only words** are able to have this effect. You can't take even an easily recognizable nonverbal cue and use it just like you would a category label. It actually takes a lot of work to get the label advantage to disappear.
 
@@ -324,7 +324,7 @@ How do words activate meaning?
 <aside class="notes">
 To wrap things up, let me return to the question I started with: how do words activate meaning, and how do words activate meaning differently than other information we take in from the environment? Well, words are unique in that they are unmotivated cues, which means they can activate more abstract representations that help when doing things like categorization. But not all word meanings are so devoid from actual experience, and at least visual knowledge appears to be represented using some of the same mechanisms that are involved in normal vision.
 
-Sometimes I worry that I've created a paradox for myself: on one hand, I'm saying that words activate abstract and symbolic representations, on the other that words activate concrete, sensory, experiential representations. But really what I think these results speak to is the general idea that there is a lot of continuity in cognition, and there really isn't a sharp divide where something like perception ends and cognition begins. And I hope that I've convinced you there might be more to studying word meanings than first meets the eye.
+Sometimes I worry that I've created a paradox for myself: on one hand, I'm saying that words are abstract and symbolic, and on the other that words are sensory and perceptual. But really what I think these results speak to is the general idea that there is a lot of continuity in cognition, and there really isn't a sharp divide between where perception ends and cognition and language begins. And I hope that I've convinced you that a good way to study word meanings is through the eyes.
 </aside>
 
 # Thank you!
